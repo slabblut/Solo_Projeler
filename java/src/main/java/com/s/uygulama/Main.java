@@ -68,6 +68,8 @@ public class Main {
     }
 }*/
 
+
+/*
 import java.util.Scanner;
 import com.s.modeller.BolmeIslemi;
 
@@ -101,6 +103,22 @@ public class Main {
 
         // try-catch, çalışma zamanında oluşabilecek hataları (exception) yakalayarak programın çökmesini önler.
         // try bloğunda hata oluşabilecek kodlar yazılır; catch bloğu hatayı yakalar ve nasıl tepki verileceğini tanımlar.
+
+    }
+}
+*/
+
+import java.util.List;
+import com.s.modeller.SayiListesi;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> sayilar = SayiListesi.getSayilar();
+
+
+        sayilar.forEach(sayi -> System.out.println(sayi));
+
+        // Lambda ifadeleri, forEach ile birlikte kullanılarak listedeki her eleman üzerinde kısa ve okunabilir işlemler yapılmasını sağlar.
 
     }
 }
