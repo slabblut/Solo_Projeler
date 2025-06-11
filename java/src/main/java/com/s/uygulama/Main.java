@@ -28,7 +28,8 @@ public class Main {
     }
 }*/
 
-import java.util.HashSet;
+
+/*import java.util.HashSet;
 import com.s.modeller.MeyveListesi;
 
 public class Main {
@@ -43,7 +44,30 @@ public class Main {
 
         }
     }
+}*/
+
+import java.util.HashMap;
+import java.util.Map;
+import com.s.modeller.OgrenciNotlari;
+
+
+public class Main {
+    public static void main(String[] args) {
+        HashMap<String, Integer> notlar = OgrenciNotlari.getNotlar();
+
+        // Her bir anahtar-değer çifti için yazdırma
+        for (Map.Entry<String, Integer> entry : notlar.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+
+            // HashMap: Anahtar-değer (key-value) yapısıyla veri tutar.
+            // put() ile veri eklenir, get() ile anahtara göre değer alınır.
+            // entrySet() ile tüm çiftler for-each döngüsüyle dolaşılabilir.
+
+
+        }
+    }
 }
+
 
 
 
