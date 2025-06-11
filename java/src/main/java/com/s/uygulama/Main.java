@@ -108,6 +108,7 @@ public class Main {
 }
 */
 
+/*
 import java.util.List;
 import com.s.modeller.SayiListesi;
 
@@ -122,6 +123,31 @@ public class Main {
 
     }
 }
+*/
+
+
+import com.s.modeller.PuanDonusturucu;
+
+public class Main {
+    public static void main(String[] args) {
+        int hamPuan = 95;
+
+        // Autoboxing
+        Integer kayitliPuan = PuanDonusturucu.donusturIntToInteger(hamPuan);
+        System.out.println("Autoboxing → int'ten Integer'a: " + kayitliPuan);
+
+        // Unboxing
+        int finalPuan = PuanDonusturucu.donusturIntegerToInt(kayitliPuan);
+        System.out.println("Unboxing → Integer'dan int'e: " + finalPuan);
+
+        // Autoboxing: Primitive bir değer (örneğin int), otomatik olarak wrapper nesnesine (Integer) dönüştürülür.
+        // Unboxing: Wrapper sınıfındaki nesne (örneğin Integer), otomatik olarak primitive tipe (int) geri çevrilir.
+        // Wrapper sınıflar, primitive verileri nesne gibi kullanmamıza ve koleksiyonlarda saklamamıza olanak tanır.
+
+    }
+}
+
+
 
 
 
