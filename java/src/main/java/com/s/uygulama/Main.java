@@ -46,7 +46,7 @@ public class Main {
     }
 }*/
 
-import java.util.HashMap;
+/*import java.util.HashMap;
 import java.util.Map;
 import com.s.modeller.OgrenciNotlari;
 
@@ -66,7 +66,45 @@ public class Main {
 
         }
     }
+}*/
+
+import java.util.Scanner;
+import com.s.modeller.BolmeIslemi;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        boolean devam = true;
+
+        System.out.println(" Bölme İşlemi Uygulamasına Hoş Geldiniz");
+
+        while (devam) {
+            try {
+                System.out.print(" Birinci sayıyı girin: ");
+                int sayi1 = scanner.nextInt();
+
+                System.out.print(" İkinci sayıyı girin: ");
+                int sayi2 = scanner.nextInt();
+
+                double sonuc = BolmeIslemi.bol(sayi1, sayi2);
+                System.out.println(" Sonuç: " + sonuc);
+                devam = false;
+
+            } catch (ArithmeticException e) {
+                System.out.println(" Hata: Sıfıra bölme yapılamaz. Lütfen tekrar deneyin.");
+            }
+        }
+
+        System.out.println(" İşlem tamamlandı. İyi günler!");
+        scanner.close();
+
+        // try-catch, çalışma zamanında oluşabilecek hataları (exception) yakalayarak programın çökmesini önler.
+        // try bloğunda hata oluşabilecek kodlar yazılır; catch bloğu hatayı yakalar ve nasıl tepki verileceğini tanımlar.
+
+    }
 }
+
 
 
 
